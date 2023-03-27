@@ -43,7 +43,7 @@ export default function Home() {
   return (
     
       <div className='container' style={{marginTop:""}}>
-        <div style={{fontSize:"30px",fontWeight:"800",color:"#207398",textAlign:"center"}}><span style={{fontSize:"30px",color:"green"}}>Welcome </span><span>!! to BTech Biriyani </span></div>
+        <div style={{fontSize:"30px",fontWeight:"800",color:"#207398",textAlign:"center"}}><span style={{fontSize:"30px",color:"green"}}>Welcome </span><span>!! to BTech Biryani </span></div>
         <div className="row">
           {products.map((product, index) => {
             product["addtoCart"]=true;
