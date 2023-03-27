@@ -113,7 +113,7 @@ export default function PlaceOrder() {
         console.log( {...values,["items"]:cartData})
         try {
           console.log(`inside`)
-         const docRef = await addDoc(collection(db, "orders"), {...values,time ,["items"]:cartData,progress:false});
+         //const docRef = await addDoc(collection(db, "orders"), {...values,time ,["items"]:cartData,progress:false});
           console.log(`'relpadong`)
           
           // console.log(curr_orders,curr_stock)
