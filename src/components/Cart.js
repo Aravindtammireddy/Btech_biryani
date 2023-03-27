@@ -56,7 +56,7 @@ const Cart=()=>{
     return(
       <div className='container'>
             <div style={{fontSize:"20px",fontWeight:"800",color:"#207398",textAlign:"center"}}><span style={{fontSize:"30px",color:"green"}}>Your Cart </span></div>
-            <div style={{position:"relative",alignItems:"center",textAlign:"center"}}>{(curr_orders>curr_stock)?<div><button  className="btn btn-danger">we have only {curr_stock} biriyani's in stock please remove some items in cart</button></div>:(cartData.length==0?<div></div>:<div><Link className="btn btn-primary" to="/placeorder">Proceed to purchase</Link></div>)}</div> 
+            <div style={{position:"relative",alignItems:"center",textAlign:"center"}}>{(curr_orders>curr_stock)?<div><button  className="btn btn-danger">we have only {curr_stock} biryani's in stock please remove some items in cart</button></div>:(cartData.length==0?<div style={{textAlign:"center",fontWeight:"800",color:"red"}}>Cart is empty , please add something here to proceed for purchasing</div>:<div><Link className="btn btn-primary" to="/placeorder">Proceed to purchase</Link></div>)}</div> 
         <div className='row'>
 
             <div>
