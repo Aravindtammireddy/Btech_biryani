@@ -23,7 +23,7 @@ export default function PlaceOrder() {
       
       const [percent, setPercent] = useState(0);
      
-      const handleUpload = () => {
+      const handleUpload = async () => {
         if (!file) {
           alert("Please upload an image first!");
         }
@@ -31,10 +31,8 @@ export default function PlaceOrder() {
         
                 // progress can be paused and resumed. It also exposes progress updates.
                 // Receives the storage reference and the file to upload.
-       const uploadTask = uploadBytesResumable(storageRef, file);
-       uploadString(storageRef, values).then((snapshot) => {
-        console.log('Uploaded a raw string!');
-      });
+       const uploadTask =  uploadBytesResumable(storageRef, file);
+      
         uploadTask.on(
         "state_changed",
        (snapshot) => {
@@ -53,6 +51,9 @@ export default function PlaceOrder() {
         });
      }
       );
+      await uploadString(storageRef, values).then((snapshot) => {
+        console.log('Uploaded a raw string!');
+      });
        };
         
 
@@ -67,13 +68,15 @@ export default function PlaceOrder() {
       
       const onSubmit = async event => {
         event.preventDefault();
-        handleUpload();
+        await handleUpload();
         console.log( {...values,["items"]:cartData})
         try {
-          const docRef = await addDoc(collection(db, "orders"), {...values,["items"]:cartData,progress:false});
+          console.log(`inside`)
+        //  const docRef = await addDoc(collection(db, "orders"), {...values,["items"]:cartData,progress:false});
+          console.log(`'relpadong`)
+         
           setReload(!reload)
-          cartEmpty()
-          
+        cartEmpty()
         
         } catch (e) {
           console.error("Error adding document: ", e);

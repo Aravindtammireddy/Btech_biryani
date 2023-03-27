@@ -6,7 +6,7 @@ import BuyDish from './components/BuyDish';
 import Home from './components/Home';
 import UserDetails from './components/UserDetails';
 import AllOrders from './components/AllOrders';
-import { BrowserRouter,Switch,Route, Link, Redirect } from 'react-router-dom';
+import { HashRouter , BrowserRouter,Switch,Route, Link, Redirect } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import PlaceOrder from './components/PlaceOrder';
 import OrderConfirmation from './components/OrderConfirmation';
@@ -23,17 +23,17 @@ function App() {
       }
  return ( <div>
       <NavBar/>
-      <BrowserRouter>
+      <HashRouter>
             <Switch>
                   <Route path="/home" component={Home} />
-                  <Route path="/orderconfirmation" component={OrderConfirmation}/>
+                  <Route exact path="/orderconfirmation" component={OrderConfirmation}/>
                   <Route path="/allorders" component={AllOrders}/>
-                  <Route path="/cart" component={Cart}/>
-                  <Route path="/placeorder" component={PlaceOrder}/>
-                  <Redirect to="/home"/>
+                  <Route  path="/cart" component={Cart}/>
+                  <Route exact path="/placeorder" component={PlaceOrder}/>
+                  
                   
             </Switch>
-      </BrowserRouter>
+      </HashRouter>
   </div>)
 }
 
