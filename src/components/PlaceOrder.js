@@ -95,6 +95,9 @@ export default function PlaceOrder() {
       const handlefilechange = (e) => {
          setFile(e.target.files[0]);
       }
+      const handleClickToDisable=event=>{
+        event.currentTarget.disabled=true;
+      }
 
       const handleChange = event => {
         setValues({ ...values, [event.target.name]: event.target.value });
@@ -105,6 +108,7 @@ export default function PlaceOrder() {
         event.preventDefault();
         console.log(`invoked`)
        let time  = (event.target[`radio1`].value)
+       event.target['button'].disabled=true;
         await handleUpload();
         console.log( {...values,["items"]:cartData})
         try {
@@ -218,7 +222,7 @@ UPI Handle btechbiriyani@ybl</p></div>
       <br></br>
       <br></br>
       <div className="row">
-        <Button type="submit" className="col-6 col-md-4 offset-1 offset-md-0 " style={{backgroundColor:"#585BEF",fontSize:"20px",textAlign:"center",margin:"auto"}} >Place The Order</Button><br></br>
+        <Button type="submit" name="button" className="col-6 col-md-4 offset-1 offset-md-0 " style={{backgroundColor:"#585BEF",fontSize:"20px",textAlign:"center",margin:"auto"}} >Place The Order</Button><br></br>
       </div>
       
     </Form>

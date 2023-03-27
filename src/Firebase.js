@@ -30,12 +30,12 @@ import { getAnalytics } from "firebase/analytics";
 // };
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDG8mnqRCwM-9caeZWGDYguc8a4hrtYAro",
-  authDomain: "btech-biriyani-2.firebaseapp.com",
-  projectId: "btech-biriyani-2",
-  storageBucket: "btech-biriyani-2.appspot.com",
-  messagingSenderId: "814818715979",
-  appId: "1:814818715979:web:604231762895fb06bde0ce"
+  apiKey: "AIzaSyC3Xz9fjbOv1hOicUnHeiKOi2iw715irhE",
+  authDomain: "btech-biryani-54b68.firebaseapp.com",
+  projectId: "btech-biryani-54b68",
+  storageBucket: "btech-biryani-54b68.appspot.com",
+  messagingSenderId: "157791887305",
+  appId: "1:157791887305:web:c1e1371e2a076a1e19d218"
 };
 
 // Initialize Firebase

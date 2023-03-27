@@ -5,7 +5,7 @@ const products=[
         name:"Full",
         originalPrice:189,
         price:149,
-        description:" full plate biriyani with one chicken leg piece and egg, suffecient enough for one   person.."
+        description:" Full plate biriyani comes with one chicken  pieces , sufficient enough for one   person.."
     },
     {
         id:2,
@@ -13,7 +13,7 @@ const products=[
         name:"Friends Pack",
         originalPrice:749,
         price:589,
-        description:"biriyani consists of 4 chicken leg piece and 4 eggs ,suffecient enough for four people"
+        description:"Friends Pack biriyani comes  with 4 chicken pieces  ,sufficient enough for four people"
     },
     {
         id:3,
@@ -21,7 +21,7 @@ const products=[
         name:"Jumbo Pack",
         originalPrice:1139,
         price:869,
-        description:"biriyani consists of 6 chicken leg piece and 6 egg,suffecient enough for six people"
+        description:"Jumbo Pack biriyani comes with 6 chicken pieces ,sufficient enough for six people"
     }
  
 ]
