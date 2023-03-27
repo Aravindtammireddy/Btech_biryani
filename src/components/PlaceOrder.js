@@ -72,7 +72,7 @@ export default function PlaceOrder() {
         console.log( {...values,["items"]:cartData})
         try {
           console.log(`inside`)
-        //  const docRef = await addDoc(collection(db, "orders"), {...values,["items"]:cartData,progress:false});
+         const docRef = await addDoc(collection(db, "orders"), {...values,["items"]:cartData,progress:false});
           console.log(`'relpadong`)
          
           setReload(!reload)

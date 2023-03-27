@@ -22,15 +22,16 @@ function App() {
             return (<div style={{margin:"30% 20%"}}><button onClick={handleClick}>test</button></div>)
       }
  return ( <div>
+   <div style={{backgroundColor:"yellow","textAlign":"center",fontSize:"20px",fontWeight:"700"}}><div>Contact Us <span>8688185437</span></div></div>
       <NavBar/>
       <HashRouter>
             <Switch>
                   <Route path="/home" component={Home} />
-                  <Route exact path="/orderconfirmation" component={OrderConfirmation}/>
+                  <Route path="/orderconfirmation" component={OrderConfirmation}/>
                   <Route path="/allorders" component={AllOrders}/>
-                  <Route  path="/cart" component={Cart}/>
-                  <Route exact path="/placeorder" component={PlaceOrder}/>
-                  
+                  <Route path="/cart" component={Cart}/>
+                  <Route path="/placeorder" component={PlaceOrder}/>
+                  <Redirect to="/home"/>
                   
             </Switch>
       </HashRouter>
