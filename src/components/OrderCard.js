@@ -22,7 +22,7 @@ export default function OrderCard({order}) {
     <div className="container mt-4" style={{borderRadius:"20px",fontSize:"18px",fontWeight:"500"}}>
          <div className="row" style={{alignItems:"center"}}>
                 <div className="col-12 col-md-4" style={{backgroundColor:`${delivered?"lightgreen":"white"}`,border:"1px solid black",borderRadius:"20px"}}>
-                    <div style={{display:"flex",flexDirection:"row",justifyContent:"space-between",}}><div style={{fontWeight:"700",color:"red"}}>{order.hostel}</div><div>{order.name}</div></div>
+                    <div style={{display:"flex",flexDirection:"row",justifyContent:"space-between",}}><div style={{fontWeight:"700",color:"red"}}>{order.hostel}</div><div>{order.time}</div><div>{order.name}</div></div>
                     <div style={{textAlign:"center"}}>{order.phone}</div>
                     <div>
                             <Table hover>

@@ -11,15 +11,32 @@ import { getAnalytics } from "firebase/analytics";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyDPKfivmsCdKh6IcFmZRXNSTM3KFhaK2vo",
-  authDomain: "btech-dum-biryani.firebaseapp.com",
-  projectId: "btech-dum-biryani",
-  storageBucket: "btech-dum-biryani.appspot.com",
-  messagingSenderId: "340403363672",
-  appId: "1:340403363672:web:2b337e80f5042e41fe0f2d"
-};
+// const firebaseConfig = {
+//   apiKey: "AIzaSyDNjbS8S1HaMb1KjJ2Luljod5bQGBuZ2zA",
+//   authDomain: "btech-dum-biryani-b6e01.firebaseapp.com",
+//   projectId: "btech-dum-biryani-b6e01",
+//   storageBucket: "btech-dum-biryani-b6e01.appspot.com",
+//   messagingSenderId: "1031524510142",
+//   appId: "1:1031524510142:web:e1c31a90013f9b6f80f1ef"
+// };
 
+// const firebaseConfig = {
+//   apiKey: "AIzaSyDG8mnqRCwM-9caeZWGDYguc8a4hrtYAro",
+//   authDomain: "btech-biriyani-2.firebaseapp.com",
+//   projectId: "btech-biriyani-2",
+//   storageBucket: "btech-biriyani-2.appspot.com",
+//   messagingSenderId: "814818715979",
+//   appId: "1:814818715979:web:604231762895fb06bde0ce"
+// };
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDG8mnqRCwM-9caeZWGDYguc8a4hrtYAro",
+  authDomain: "btech-biriyani-2.firebaseapp.com",
+  projectId: "btech-biriyani-2",
+  storageBucket: "btech-biriyani-2.appspot.com",
+  messagingSenderId: "814818715979",
+  appId: "1:814818715979:web:604231762895fb06bde0ce"
+};
 
 // Initialize Firebase
 const app=initializeApp(firebaseConfig);

@@ -103,10 +103,10 @@ const CardHelper = (
         
         <span style={{fontSize:"15px",fontWeight:"800",color:"#207398",margin:"0 0 0 10px"}}>Description:</span>
         <div style={{overflowX:"hidden",fontSize:"17px",fontWeight:"600",color:"black",margin:"0 10px 0 10px"}}>
-          {cartDescrption.slice(0,50)}{cartDescrption.length<30?<div><br></br></div>:"..."}
+          {cartDescrption}{cartDescrption.length<30?<div><br></br></div>:""}
         </div>
         <div style={{textAlign:"center"}}>
-        <span style={{fontSize:"20px",fontWeight:"800",color:"#207398"}}>price:</span><span style={{fontSize:"20px",fontWeight:"800",color:"green"}}>Rs {cartPrice}</span>
+        <span style={{fontSize:"20px",fontWeight:"800",color:"#207398"}}>price:</span><span style={{fontSize:"20px",fontWeight:"800",color:"green"}}>Rs {cartPrice}</span><span style={{fonstSzie:"10px",fontWeight:"500",color:"red"}}>(<s>{product.originalPrice}</s>)</span>
         </div>
         {product["iscart"]?<div className="row" style={{alignItems:"center",justifyContent:"center",margin:"0 0 0 25%",width:"50%"}}><span>Quantity</span><span><button onClick={()=>{decreaseQuantity(product.id); product.setReload(!product.reload)}}>-</button></span><span style={{fontSize:"20px",fontWeight:"800" , border:"1px solid black",padding:"0 5px",margin:"5px"}}>{product.quantity}</span><span><button onClick={()=>{increaseQuantity(product.id) ;product.setReload(!product.reload)}}>+</button></span></div>:<span></span>}
         <div className="row" >

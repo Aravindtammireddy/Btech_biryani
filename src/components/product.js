@@ -5,15 +5,15 @@ const products=[
         name:"Full",
         originalPrice:189,
         price:149,
-        description:"Full plate hyderabadi biryani with one chicken leg piece , suffecient enough for one person"
+        description:" full plate biriyani with one chicken leg piece and egg, suffecient enough for one   person.."
     },
     {
         id:2,
         image:"medium.jpeg",
-        name:"Family Pack",
+        name:"Friends Pack",
         originalPrice:749,
         price:589,
-        description:"Family pack hyderabadi biryani consists of 4 chicken leg piece and 4 eggs"
+        description:"biriyani consists of 4 chicken leg piece and 4 eggs ,suffecient enough for four people"
     },
     {
         id:3,
@@ -21,7 +21,7 @@ const products=[
         name:"Jumbo Pack",
         originalPrice:1139,
         price:869,
-        description:"Jumbo Pack hyderabadi biryani consists of 6 chicken leg piece and 6 egg"
+        description:"biriyani consists of 6 chicken leg piece and 6 egg,suffecient enough for six people"
     }
  
 ]
