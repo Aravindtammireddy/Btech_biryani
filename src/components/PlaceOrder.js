@@ -132,7 +132,7 @@ export default function PlaceOrder() {
     }
   return (
     <div className="  offset-md-3 col-12 col-md-6">
-      {reload?<Redirect to="orderconfirmation"/>:<span></span>}
+      {/* {reload?<Redirect to="orderconfirmation"/>:<span></span>}
         <div style={{}}> 
             <BillDetails/>
         </div>
@@ -167,7 +167,7 @@ export default function PlaceOrder() {
         </option>
       </Input>
     </Col>
-  </FormGroup> */}
+  </FormGroup> }
   <FormGroup>
     <Label for="phone">
       Ph. number
@@ -225,7 +225,8 @@ UPI Handle btechbiriyani@ybl</p></div>
         <Button type="submit" name="button" className="col-6 col-md-4 offset-1 offset-md-0 " style={{backgroundColor:"#585BEF",fontSize:"20px",textAlign:"center",margin:"auto"}} >Place The Order</Button><br></br>
       </div>
       
-    </Form>
+    </Form>  */}
+    <h1> CALL AND ORDER AT 8688185437 </h1>
     </div>
   )
 }
