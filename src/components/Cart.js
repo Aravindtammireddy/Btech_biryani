@@ -51,7 +51,7 @@ const Cart=()=>{
     }
     
     useEffect(()=>{
-        // setCartData(loadCart())
+         setCartData(loadCart())
         // async function fun () {
         //     const result1 = await getstock("dum");
         //     const result2 = await getstock("fry");
