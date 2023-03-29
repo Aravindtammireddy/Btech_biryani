@@ -1,27 +1,43 @@
 const products=[
     {
         id:1,
-        image:"small.jpeg",
-        name:"Full",
+        image:"full.jpg",
+        name:"Full Plate Dum Biryani",
+        category :"dum",
         originalPrice:189,
         price:149,
-        description:" Full plate biryani comes with one chicken  pieces , sufficient enough for one   person.."
+        count : 1,
+        description:" Chicken Biryani (servers 1) + onions and lemon + Raita + Non-veg Sherva"
     },
     {
         id:2,
-        image:"medium.jpeg",
+        image:"friends.jpg",
         name:"Friends Pack",
         originalPrice:749,
+        category :"dum",
         price:589,
-        description:"Friends Pack biryani comes  with 4 chicken pieces  ,sufficient enough for four people"
+        count : 4,
+        description:"Chicken Biryani (servers 4) + onions and lemon + Raita + Non-veg Sherva"
     },
     {
         id:3,
-        image:"big.png",
-        name:"Jumbo Pack",
+        image:"bucket.jpg",
+        name:"Bucket Biryani",
+        category :"dum",
         originalPrice:1139,
         price:869,
-        description:"Jumbo Pack biryani comes with 6 chicken pieces ,sufficient enough for six people"
+        count : 6,
+        description:"Chicken Biryani (servers 6) + onions and lemon + Raita+Non-veg Sherva"
+    }
+    ,{
+        id:4,
+        image:"big.png",
+        name:"Full PLate Fried Piece",
+        category :"fry",
+        originalPrice:220,
+        price:179,
+        count : 1,
+        description:"Dum Biryani with $ fried pieces (server 1) + onions and lemon + Raita + Non-veg Sherva"
     }
  
 ]

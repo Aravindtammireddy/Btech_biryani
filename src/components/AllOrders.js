@@ -1,47 +1,32 @@
-import React,{useEffect, useState} from 'react'
-import { db } from '../Firebase';
-// import { collection, getDocs } from "firebase/firestore"; 
-import { collection, query, where, onSnapshot } from "firebase/firestore";
-import { getDocs } from 'firebase/firestore';
+import React,{useEffect, useState ,  useContext } from 'react';
 import OrderCard from './OrderCard';
-import { set } from 'firebase/database';
+import { Globalcontext } from '../context/Globalstate';
+
 export default function AllOrders() {
-  const [allOrderDetails,setAllOrderDetails]=useState([
-]
-)
+  const {orders ,getorders } = useContext(Globalcontext);
+  const [order, setorder] = useState([]);
+  useEffect(()=>{ 
+    
+    async function fun () {
+    const result = await getorders();
+    setorder(result);
+    console.log(`called`, result , orders);
+  }
+  fun();}
 
-  const getData=async ()=>{
-  const querySnapshot = await getDocs(collection(db, "orders"));
-  var temp_currOrderDetails=[]
-querySnapshot.forEach((doc) => {
-  // doc.data()['id']=doc.id;
-  var temp=doc.data()
-  temp['id']=doc.id;
-  // if(temp.progress == "false"){
-  // temp_currOrderDetails.push(temp);
-  // }
-   temp_currOrderDetails.push(temp);
+  ,[]);
+  
+  console.log(orders,"orders")
 
-}
-
-
-
-)
-
-setAllOrderDetails(temp_currOrderDetails)
-
-}
-
-getData()
-// console.log(allOrderDetails)
   return (
     <div className="container-fluid">
       <div className="row">
         
-        {allOrderDetails.map((order)=>{
-          return (<OrderCard  id = {order.id} key={order.id} order={order}/>)
+        {order.map((eachOrder)=>{
+          return (<OrderCard  id = {eachOrder._id} key={eachOrder._id} order={eachOrder} setorder={setorder} stateOrder={order}/>)
         })
         }
+     
       
       </div>
       {/* {allOrderDetails.map((item)=>{ return (<div key={item.hostel}>{item.hostel}</div>)})} */}

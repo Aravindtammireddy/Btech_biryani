@@ -1,15 +1,24 @@
-import React ,{useState} from 'react'
+import React ,{useState,useContext} from 'react'
 import { db } from '../Firebase'
 import { Table } from 'reactstrap';
 import { collection, updateDoc,doc } from 'firebase/firestore';
+import axios from 'axios';
+import { Globalcontext } from '../context/Globalstate';
 
-export default function OrderCard({order}) {
+
+export default function OrderCard({order,setorder,stateOrder}) {
     const [delivered,setDelivered]=useState(order.progress)
-    function done(){
+    const {progress ,updateprogress } = useContext(Globalcontext);
+
+    async function done(){
+       //update database progress 
+        // updateDoc(doc(db,"orders",order.id),{progress:!delivered})
+        //           .then((ref)=>{})
+        console.log("delivered")
+        console.log(order._id)
+        const res=await updateprogress(order._id,!delivered)
+        setDelivered(!delivered);
         
-        updateDoc(doc(db,"orders",order.id),{progress:!delivered})
-                  .then((ref)=>{})
-                  setDelivered(!delivered);
 
 
     }
@@ -22,8 +31,8 @@ export default function OrderCard({order}) {
     <div className="container mt-4" style={{borderRadius:"20px",fontSize:"18px",fontWeight:"500"}}>
          <div className="row" style={{alignItems:"center"}}>
                 <div className="col-12 col-md-4" style={{backgroundColor:`${delivered?"lightgreen":"white"}`,border:"1px solid black",borderRadius:"20px"}}>
-                    <div style={{display:"flex",flexDirection:"row",justifyContent:"space-between",}}><div style={{fontWeight:"700",color:"red"}}>{order.hostel}</div><div>{order.time}</div><div>{order.name}</div></div>
-                    <div style={{textAlign:"center"}}>{order.phone}</div>
+                    <div style={{display:"flex",flexDirection:"row",justifyContent:"space-between",}}><div style={{fontWeight:"700",color:"red"}}>{order.hostel}</div><div>{order.slot}</div><div>{order.name}</div></div>
+                    <div style={{textAlign:"center"}}>{order.phonenumber}</div>
                     <div>
                             <Table hover>
                                 <thead>
