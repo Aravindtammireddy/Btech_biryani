@@ -15,7 +15,7 @@ export default function PlaceOrder() {
   // let curr_stock_dum  =0;
   // let curr_stock_fry = 0
   let ordered_stock_dum=0
-  let ordered_stock_fry=0;;
+  let ordered_stock_fry=0;
   useEffect(()=>{
     async function fun () {
        var cur_stock_dum = await getstock("dum");
@@ -30,9 +30,9 @@ export default function PlaceOrder() {
   },[])
   const [reload,setReload]=useState(false)
     const [values, setValues] = useState({
-        name: "jnani",
-        hostel:"aqua",
-        phone:"8374754632"
+        name: "",
+        hostel:"",
+        phone:""
         
       });
       var curr_orders=  0;
@@ -42,16 +42,19 @@ export default function PlaceOrder() {
       const handleChange = event => {
         setValues({ ...values, [event.target.name]: event.target.value });
       };
-
+       console.log(`card data`, cartData)
       for (var i=0;i<cartData.length;i++){
         
         if (cartData[i].category=="dum"){
-          ordered_stock_dum+=(cartData[i].count*cartData[i].quantity)
+          ordered_stock_dum+=(cartData[i].count *cartData[i].quantity)
+
         }
         else if (cartData[i].category=="fry"){
-          ordered_stock_fry+=(cartData[i].count*cartData[i].quantity)
+          ordered_stock_fry+=(cartData[i].count *cartData[i].quantity)
         }
       }
+
+      console.log(ordered_stock_dum,ordered_stock_fry,"line 57")
       
       const onSubmit = async event => {
 
@@ -123,6 +126,7 @@ export default function PlaceOrder() {
   <legend>select a time slot to deliver</legend>
   <FormGroup check>
       <Input
+         required
         name="radio1"
         type="radio"
         value="8pm"
@@ -134,6 +138,7 @@ export default function PlaceOrder() {
     </FormGroup>
     <FormGroup check>
       <Input
+         required
         name="radio1"
         type="radio"
         value="9pm"
@@ -154,7 +159,7 @@ UPI Handle btechbiriyani@ybl</p></div>
 
   <FormGroup>
        <Label for="proof">please enter your transactionID</Label><br></br>
-       <input type="text" name="proof" id='proof'  />
+       <input type="text" required name="proof" id='proof'  />
   </FormGroup>
 
       <br></br>
