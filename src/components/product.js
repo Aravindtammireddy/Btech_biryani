@@ -32,12 +32,12 @@ const products=[
     ,{
         id:4,
         image:"big.png",
-        name:"Full PLate Fry Piece",
+        name:"Fry Piece Biryani",
         category :"fry",
         originalPrice:220,
         price:179,
         count : 1,
-        description:"Dum Biryani with fried pieces (server 1) + onions and lemon + Raita + Non-veg Sherva"
+        description:"Dum Biryani with 4 fried pieces (server 1) + onions and lemon + Raita + Non-veg Sherva"
     }
  
 ]

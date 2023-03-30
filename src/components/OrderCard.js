@@ -32,7 +32,9 @@ export default function OrderCard({order,setorder,stateOrder}) {
          <div className="row" style={{alignItems:"center"}}>
                 <div className="col-12 col-md-4" style={{backgroundColor:`${delivered?"lightgreen":"white"}`,border:"1px solid black",borderRadius:"20px"}}>
                     <div style={{display:"flex",flexDirection:"row",justifyContent:"space-between",}}><div style={{fontWeight:"700",color:"red"}}>{order.hostel}</div><div>{order.slot}</div><div>{order.name}</div></div>
-                    <div style={{textAlign:"center"}}>{order.phonenumber}</div>
+                    <div style={{textAlign:"center"}}>ph-{order.phonenumber}</div>
+                    <div style={{textAlign:"center"}}>{order.transactionID}</div>
+
                     <div>
                             <Table hover>
                                 <thead>
