@@ -7,7 +7,7 @@ const products=[
         originalPrice:189,
         price:149,
         count : 1,
-        description:" Chicken Biryani (servers 1) + onions and lemon + Raita + Non-veg Sherva"
+        description:" Chicken Biryani (serves 1) + onions and lemon + Raita + Non-veg Sherva"
     },
     {
         id:2,
@@ -17,7 +17,7 @@ const products=[
         category :"dum",
         price:589,
         count : 4,
-        description:"Chicken Biryani (servers 4) + onions and lemon + Raita + Non-veg Sherva"
+        description:"Chicken Biryani (serves 4) + onions and lemon + Raita + Non-veg Sherva"
     },
     {
         id:3,
@@ -27,7 +27,7 @@ const products=[
         originalPrice:1139,
         price:869,
         count : 6,
-        description:"Chicken Biryani (servers 6) + onions and lemon + Raita+Non-veg Sherva"
+        description:"Chicken Biryani (serves 6) + onions and lemon + Raita+Non-veg Sherva"
     }
     ,{
         id:4,
@@ -37,7 +37,7 @@ const products=[
         originalPrice:220,
         price:179,
         count : 1,
-        description:"Dum Biryani with 4 fried pieces (server 1) + onions and lemon + Raita + Non-veg Sherva"
+        description:"Dum Biryani with 4 fried pieces (serve 1) + onions and lemon + Raita + Non-veg Sherva"
     }
  
 ]
