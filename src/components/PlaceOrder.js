@@ -79,7 +79,7 @@ export default function PlaceOrder() {
           let remaining_stock_dum = curr_stock_dum - ordered_stock_dum
           let remaining_stock_fry = curr_stock_fry - ordered_stock_fry
           console.log(remaining_stock_dum,remaining_stock_fry,"line 86")
-          if(remaining_stock_dum<=0 || remaining_stock_fry<= 0){
+          if(remaining_stock_dum<0 || remaining_stock_fry< 0){
             alert(`your order is more than availability please check and order again`)
           }
           else{
