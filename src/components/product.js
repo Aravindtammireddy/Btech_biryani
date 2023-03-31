@@ -10,25 +10,26 @@ const products=[
         description:" Chicken Biryani (serves 1) + onions and lemon + Raita + Non-veg Sherva"
     },
     {
+        id:3,
+        image:"bucket.jpg",
+        name:"Family Biryani",
+        category :"dum",
+        originalPrice:567,
+        price:469,
+        count : 3,
+        description:"Chicken Biryani (serves 3) + onions and lemon + Raita+Non-veg Sherva"
+    },
+    {
         id:2,
-        image:"friends.jpg",
+        image:"family.jpg",
         name:"Friends Pack",
         originalPrice:749,
         category :"dum",
-        price:589,
+        price:569,
         count : 4,
         description:"Chicken Biryani (serves 4) + onions and lemon + Raita + Non-veg Sherva"
-    },
-    {
-        id:3,
-        image:"bucket.jpg",
-        name:"Bucket Biryani",
-        category :"dum",
-        originalPrice:1139,
-        price:869,
-        count : 6,
-        description:"Chicken Biryani (serves 6) + onions and lemon + Raita+Non-veg Sherva"
     }
+    
     ,{
         id:4,
         image:"big.png",
