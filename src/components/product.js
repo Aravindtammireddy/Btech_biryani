@@ -11,8 +11,8 @@ const products=[
     },
     {
         id:3,
-        image:"bucket.jpg",
-        name:"Family Biryani",
+        image:"family.jpg",
+        name:"Family pack",
         category :"dum",
         originalPrice:567,
         price:469,
@@ -21,7 +21,7 @@ const products=[
     },
     {
         id:2,
-        image:"family.jpg",
+        image:"friends.jpg",
         name:"Friends Pack",
         originalPrice:749,
         category :"dum",
