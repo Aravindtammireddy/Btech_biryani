@@ -22,7 +22,7 @@ export default function PlaceOrder() {
        var cur_stock_fry = await getstock("fry");
        setCurr_Stock_Dum(cur_stock_dum[0].quantity)
        setCurr_Stock_Fry(cur_stock_fry[0].quantity)
-       console.log(cur_stock_dum[0],cur_stock_fry[0],"line 25") 
+      
 
     }
 
@@ -42,7 +42,7 @@ export default function PlaceOrder() {
       const handleChange = event => {
         setValues({ ...values, [event.target.name]: event.target.value });
       };
-       console.log(`card data`, cartData)
+     
       for (var i=0;i<cartData.length;i++){
         
         if (cartData[i].category=="dum"){
@@ -54,16 +54,16 @@ export default function PlaceOrder() {
         }
       }
 
-      console.log(ordered_stock_dum,ordered_stock_fry,"line 57")
+      
       
       const onSubmit = async event => {
 
         event.preventDefault();
-        console.log(`invoked`)
+       
        let time  = (event.target[`radio1`].value)
        let ID = (event.target[`proof`].value)
        event.target['button'].disabled=true;
-        console.log( {...values,["items"]:cartData})
+       
         const neworder = {
               name : values.name,
               hostel : values.hostel,
@@ -75,10 +75,10 @@ export default function PlaceOrder() {
         }
         try {
           
-          console.log(curr_stock_dum,curr_stock_fry,"line 82") 
+          
           let remaining_stock_dum = curr_stock_dum - ordered_stock_dum
           let remaining_stock_fry = curr_stock_fry - ordered_stock_fry
-          console.log(remaining_stock_dum,remaining_stock_fry,"line 86")
+          
           if(remaining_stock_dum<0 || remaining_stock_fry< 0){
             alert(`your order is more than availability please check and order again`)
           }

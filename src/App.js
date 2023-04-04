@@ -13,7 +13,9 @@ import {GlobalProvider} from './context/Globalstate';
 function App() {
      
  return ( <div>
+   
    <div style={{backgroundColor:"yellow","textAlign":"center",fontSize:"20px",fontWeight:"700"}}><div>Contact Us: <span>8688185437</span></div></div>
+   {/* <div id="updates">Hello</div> */}
    <GlobalProvider >
       <NavBar/>
       <HashRouter>
