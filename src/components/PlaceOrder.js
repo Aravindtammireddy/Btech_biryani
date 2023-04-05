@@ -133,7 +133,7 @@ export default function PlaceOrder() {
       />
       {' '}
       <Label check>
-        8PM
+        12PM
       </Label>
     </FormGroup>
     <FormGroup check>
@@ -145,7 +145,7 @@ export default function PlaceOrder() {
       />
       {' '}
       <Label check>
-        9PM
+        1PM
       </Label>
     </FormGroup>
   <FormGroup>
