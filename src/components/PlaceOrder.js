@@ -129,11 +129,35 @@ export default function PlaceOrder() {
          required
         name="radio1"
         type="radio"
+        value="7:30pm"
+      />
+      {' '}
+      <Label check>
+        7:30PM
+      </Label>
+    </FormGroup>
+  <FormGroup check>
+      <Input
+         required
+        name="radio1"
+        type="radio"
         value="8pm"
       />
       {' '}
       <Label check>
         8PM
+      </Label>
+    </FormGroup>
+    <FormGroup check>
+      <Input
+         required
+        name="radio1"
+        type="radio"
+        value="8:30pm"
+      />
+      {' '}
+      <Label check>
+        8:30PM
       </Label>
     </FormGroup>
     <FormGroup check>
