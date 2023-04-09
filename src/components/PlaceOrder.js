@@ -174,7 +174,7 @@ export default function PlaceOrder() {
     </FormGroup>
   <FormGroup>
        <Label for="qr">pay using this qr code</Label>
-       <div><img id="qr" style={{height:"80%",  width:"80%"}} src = 'qr2.JPG' alt = "qr code for payment"></img>
+       <div><img id="qr" style={{height:"80%",  width:"80%"}} src = 'qr2.jpeg' alt = "qr code for payment"></img>
        <p> Account Number 8688185437 
            UPI Handle porikanithyanand@ybl</p></div>
   </FormGroup>
