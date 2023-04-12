@@ -20,7 +20,12 @@ const CardHelper = (
   const cartDescrption = product ? product.description : "Default description";
   const cartPrice = product ? product.price : "DEFAULT";
   const addToCart = () => {
-    if(!alreadyExistInCart(product.id)){
+    var date=new Date();
+
+    if (product.count>1 && date.getHours()>=19){
+      alert("combo packs can only be ordered before 7PM")
+    }
+    else if(!alreadyExistInCart(product.id)){
         addItemToCart(product, () => alert("product added to cart successfully"));
     }
     else{
@@ -37,6 +42,8 @@ const CardHelper = (
   };
 
   const showAddToCart = addtoCart => {
+
+    
     return (
       addtoCart && (
         <button
