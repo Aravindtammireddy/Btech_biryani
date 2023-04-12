@@ -25,7 +25,7 @@ const products=[
         name:"Friends Pack Dum Biryani",
         originalPrice:749,
         category :"dum",
-        price:589,
+        price:599,
         count : 4,
         description:"Chicken Biryani (serves 4) + onions and lemon + Raita + Non-veg Sherva"
     }
@@ -56,8 +56,8 @@ const products=[
         image:"family.jpg",
         name:"Fry Piece Biryani Family Pack",
         category :"fry",
-        originalPrice:567,
-        price:489,
+        originalPrice:649,
+        price:569,
         count : 3,
         description:"Dum Biryani with 12-15 fried pieces (serves 3) + onions and lemon + Raita + Non-veg Sherva"
     },{
@@ -65,8 +65,8 @@ const products=[
         image:"friends.jpg",
         name:"Fry Piece Biryani Friends Pack",
         category :"fry",
-        originalPrice:756,
-        price:749,
+        originalPrice:849,
+        price:799,
         count : 4,
         description:"Dum Biryani with 16-18 fried pieces (serves 4) + onions and lemon + Raita + Non-veg Sherva"
     },{
