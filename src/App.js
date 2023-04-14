@@ -14,7 +14,7 @@ function App() {
      
  return ( <div>
    
-   <div style={{backgroundColor:"yellow","textAlign":"center",fontSize:"20px",fontWeight:"700"}}><div>Contact Us: <span>8688185437</span></div></div>
+   <div style={{backgroundColor:"yellow","textAlign":"center",fontSize:"20px",fontWeight:"700"}}><div>Contact Us: <span>93447 99429</span></div></div>
    <div style={{backgroundColor:"yellow","textAlign":"center",fontSize:"20px",fontWeight:"700"}}><div>combo packs (Friends,Family and Jumbo packs) can only be ordered before 7PM</div></div>
 
    {/* <div id="updates">Hello</div> */}
