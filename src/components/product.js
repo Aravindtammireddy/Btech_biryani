@@ -38,7 +38,7 @@ const products=[
         category :"dum",
         price:899,
         count : 6,
-        description:"Chicken Biryani (serves 4) + onions and lemon + Raita + Non-veg Sherva"
+        description:"Chicken Biryani (serves 6) + onions and lemon + Raita + Non-veg Sherva"
     }
     
     ,{
