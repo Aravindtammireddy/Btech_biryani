@@ -78,6 +78,16 @@ const products=[
         price:999,
         count : 6,
         description:"Dum Biryani with 24-26 fried pieces (serves 6) + onions and lemon + Raita + Non-veg Sherva"
+    },
+    {
+        id:9,
+        image:"veg.jpg",
+        name:"Veg Dum Biryani",
+        category :"veg",
+        originalPrice:189,
+        price:149,
+        count : 1,
+        description:" Veg Biryani (serves 1) + onions and lemon + Raita + veg Sherva"
     }
  
 ]

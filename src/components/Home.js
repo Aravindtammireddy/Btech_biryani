@@ -8,19 +8,21 @@ import {socket} from './Socket'
 
 export default function Home() {
   const {getstock} = useContext(Globalcontext);
-  const [stock, setstock] = useState({"dum":"Loding stocks" , "fry":"loading stocks"});
+  const [stock, setstock] = useState({"dum":"Loding stocks" , "fry":"loading stocks","veg":"loading stocks"});
   socket.on("new_stock",async ()=>{
     const result1 = await getstock("dum");
     const result2 = await getstock("fry");
-    setstock({"dum":result1[0].quantity , "fry":result2[0].quantity});
-    console.log(`called`, result1[0].quantity , result2[0].quantity );
+    const result3 = await getstock("veg");
+    setstock({"dum":result1[0].quantity , "fry":result2[0].quantity,"veg":result3[0].quantity});
+    console.log(`called`, result1[0].quantity , result2[0].quantity,result3[0].quantity );
 })
   useEffect(()=>{
     async function fun () {
       const result1 = await getstock("dum");
       const result2 = await getstock("fry");
-      setstock({"dum":result1[0].quantity , "fry":result2[0].quantity});
-      console.log(`called`, result1[0].quantity , result2[0].quantity );
+      const result3 = await getstock("veg");
+      setstock({"dum":result1[0].quantity , "fry":result2[0].quantity,"veg":result3[0].quantity});
+      console.log(`called`, result1[0].quantity , result2[0].quantity,result3[0].quantity );
     }
     fun();   
   },[])
@@ -55,6 +57,21 @@ export default function Home() {
             product["addtoCart"]=true;
             product["removeFromCart"]=false;
             if(product.category=="dum"){
+            return (
+              <div key={index} className="col-md-4 p-0 m-0">
+                <CardHelper props={product} setstock={setstock} stock={stock}/>
+                {/* {product.name} */}
+              </div>
+            );}
+          })}
+        </div>
+        <hr></hr>
+        <div className="offset-1" style={{fontSize:"20px",fontWeight:"600",display:`${stock['veg']<=0?"none":"something"}` }}>Hyderabadi Veg Dum Biryani<span style={{fonstSzie:"10px",fontWeight:"500",color:"red"}}>( {stock.veg} left)</span></div>
+        <div className="row" style={{display:`${stock['veg']<=0?"none":"something"}`}}>
+          {products.map((product, index) => {
+            product["addtoCart"]=true;
+            product["removeFromCart"]=false;
+            if(product.category=="veg"){
             return (
               <div key={index} className="col-md-4 p-0 m-0">
                 <CardHelper props={product} setstock={setstock} stock={stock}/>
