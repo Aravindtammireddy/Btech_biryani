@@ -8,6 +8,7 @@ import { cartEmpty } from './Helpers';
 import {socket} from './Socket'
 
 export default function PlaceOrder() {
+  var time=new Date();
   const {getstock} = useContext(Globalcontext);
   //const [stock, setstock] = useState({"dum":30 , "fry":30});
   const [curr_stock_dum,setCurr_Stock_Dum]=useState(0)
@@ -124,6 +125,68 @@ export default function PlaceOrder() {
     />
   </FormGroup>
   <legend>select a time slot to deliver</legend>
+  {time.getHours()>=0 && time.getHours()<15 && time.getDate()<24 && time.getMonth()==3 && time.getFullYear()==2023?<div>
+    <FormGroup check>
+      <Input
+         required
+        name="radio1"
+        type="radio"
+        value="12:000pm"
+      />
+      {' '}
+      <Label check>
+        12:00PM
+      </Label>
+    </FormGroup>
+  <FormGroup check>
+      <Input
+         required
+        name="radio1"
+        type="radio"
+        value="12:30PM"
+      />
+      {' '}
+      <Label check>
+      12:30PM
+      </Label>
+    </FormGroup>
+    <FormGroup check>
+      <Input
+         required
+        name="radio1"
+        type="radio"
+        value="1:00PM"
+      />
+      {' '}
+      <Label check>
+      1:00PM
+      </Label>
+    </FormGroup>
+    <FormGroup check>
+      <Input
+         required
+        name="radio1"
+        type="radio"
+        value="1:30PM"
+      />
+      {' '}
+      <Label check>
+       1:30PM
+      </Label>
+    </FormGroup>
+    <FormGroup check>
+      <Input
+         required
+        name="radio1"
+        type="radio"
+        value="2:00PM"
+      />
+      {' '}
+      <Label check>
+       2:00PM
+      </Label>
+    </FormGroup>
+  </div>:<div>
   <FormGroup check>
       <Input
          required
@@ -184,8 +247,9 @@ export default function PlaceOrder() {
        9:00PM
       </Label>
     </FormGroup>
+    </div>}
   <FormGroup>
-       <Label for="qr">pay using this qr code</Label>
+       <Label for="qr">pay using this QR code</Label>
        <div><img id="qr" style={{height:"80%",  width:"80%"}} src = 'qr2.jpeg' alt = "qr code for payment"></img>
        <p> Account Number 8688185437 
            UPI Handle porikanithyanand@ybl</p></div>
