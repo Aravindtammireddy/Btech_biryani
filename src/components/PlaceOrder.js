@@ -129,11 +129,11 @@ export default function PlaceOrder() {
          required
         name="radio1"
         type="radio"
-        value="7:30pm"
+        value="12:30pm"
       />
       {' '}
       <Label check>
-        7:30PM
+        12:30PM
       </Label>
     </FormGroup>
   <FormGroup check>
@@ -141,11 +141,11 @@ export default function PlaceOrder() {
          required
         name="radio1"
         type="radio"
-        value="8pm"
+        value="1pm"
       />
       {' '}
       <Label check>
-        8PM
+        1PM
       </Label>
     </FormGroup>
     <FormGroup check>
@@ -153,11 +153,11 @@ export default function PlaceOrder() {
          required
         name="radio1"
         type="radio"
-        value="8:30pm"
+        value="1:30pm"
       />
       {' '}
       <Label check>
-        8:30PM
+        1:30PM
       </Label>
     </FormGroup>
     <FormGroup check>
@@ -165,11 +165,11 @@ export default function PlaceOrder() {
          required
         name="radio1"
         type="radio"
-        value="9pm"
+        value="2pm"
       />
       {' '}
       <Label check>
-        9PM
+        2PM
       </Label>
     </FormGroup>
   <FormGroup>
