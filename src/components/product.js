@@ -5,7 +5,7 @@ const products=[
         name:"Full Plate Dum Biryani",
         category :"dum",
         originalPrice:189,
-        price:159,
+        price:164,
         count : 1,
         description:" Chicken Biryani (serves 1) + onions and lemon + Raita + Non-veg Sherva"
     },
@@ -15,7 +15,7 @@ const products=[
         name:"Family pack Dum Biryani",
         category :"dum",
         originalPrice:567,
-        price:489,
+        price:499,
         count : 3,
         description:"Chicken Biryani (serves 3) + onions and lemon + Raita+Non-veg Sherva"
     },
@@ -47,7 +47,7 @@ const products=[
         name:"Fry Piece Biryani",
         category :"fry",
         originalPrice:220,
-        price:189,
+        price:194,
         count : 1,
         description:"Dum Biryani with 4 fried pieces (serves 1) + onions and lemon + Raita + Non-veg Sherva"
     }
@@ -57,7 +57,7 @@ const products=[
         name:"Fry Piece Biryani Family Pack",
         category :"fry",
         originalPrice:649,
-        price:569,
+        price:584,
         count : 3,
         description:"Dum Biryani with 12-15 fried pieces (serves 3) + onions and lemon + Raita + Non-veg Sherva"
     },{
