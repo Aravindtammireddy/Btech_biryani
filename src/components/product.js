@@ -5,7 +5,7 @@ const products=[
         name:"Full Plate Dum Biryani",
         category :"dum",
         originalPrice:189,
-        price:164,
+        price:169,
         count : 1,
         description:" Chicken Biryani (serves 1) + onions and lemon + Raita + Non-veg Sherva"
     },
@@ -25,7 +25,7 @@ const products=[
         name:"Friends Pack Dum Biryani",
         originalPrice:749,
         category :"dum",
-        price:599,
+        price:619,
         count : 4,
         description:"Chicken Biryani (serves 4) + onions and lemon + Raita + Non-veg Sherva"
     }
@@ -36,7 +36,7 @@ const products=[
         name:"Dum biryani jumbo pack",
         originalPrice:954,
         category :"dum",
-        price:899,
+        price:929,
         count : 6,
         description:"Chicken Biryani (serves 6) + onions and lemon + Raita + Non-veg Sherva"
     }
@@ -47,7 +47,7 @@ const products=[
         name:"Fry Piece Biryani",
         category :"fry",
         originalPrice:220,
-        price:194,
+        price:199,
         count : 1,
         description:"Dum Biryani with 4 fried pieces (serves 1) + onions and lemon + Raita + Non-veg Sherva"
     }
@@ -57,7 +57,7 @@ const products=[
         name:"Fry Piece Biryani Family Pack",
         category :"fry",
         originalPrice:649,
-        price:584,
+        price:599,
         count : 3,
         description:"Dum Biryani with 12-15 fried pieces (serves 3) + onions and lemon + Raita + Non-veg Sherva"
     },{
@@ -66,7 +66,7 @@ const products=[
         name:"Fry Piece Biryani Friends Pack",
         category :"fry",
         originalPrice:849,
-        price:799,
+        price:819,
         count : 4,
         description:"Dum Biryani with 16-18 fried pieces (serves 4) + onions and lemon + Raita + Non-veg Sherva"
     },{
@@ -75,7 +75,7 @@ const products=[
         name:"Fry Piece Biryani Jumbo pack",
         category :"fry",
         originalPrice:1134,
-        price:999,
+        price:1029,
         count : 6,
         description:"Dum Biryani with 24-26 fried pieces (serves 6) + onions and lemon + Raita + Non-veg Sherva"
     },
