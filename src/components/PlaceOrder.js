@@ -6,6 +6,7 @@ import { loadCart } from './Helpers';
 import { Redirect } from 'react-router';
 import { cartEmpty } from './Helpers';
 import {socket} from './Socket'
+import OrderConfirmation from './OrderConfirmation';
 
 export default function PlaceOrder() {
   var time=new Date();
@@ -13,6 +14,7 @@ export default function PlaceOrder() {
   //const [stock, setstock] = useState({"dum":30 , "fry":30});
   const [curr_stock_dum,setCurr_Stock_Dum]=useState(0)
   const [curr_stock_fry,setCurr_Stock_Fry]=useState(0)
+  const [count,setcount] = useState(0);
   // let curr_stock_dum  =0;
   // let curr_stock_fry = 0
   let ordered_stock_dum=0
@@ -79,7 +81,7 @@ export default function PlaceOrder() {
           
           let remaining_stock_dum = curr_stock_dum - ordered_stock_dum
           let remaining_stock_fry = curr_stock_fry - ordered_stock_fry
-          
+          let count1 = ordered_stock_dum+ordered_stock_fry;
           if(remaining_stock_dum<0 || remaining_stock_fry< 0){
             alert(`your order is more than availability please check and order again`)
           }
@@ -87,6 +89,7 @@ export default function PlaceOrder() {
            socket.emit("stockchange",[{name:"dum",count: remaining_stock_dum} , {name:"fry",count: remaining_stock_fry}]);
           await addorder(neworder)
           setReload(!reload)
+          setcount(count1)
           cartEmpty()
         } }catch (e) {
           console.error("Error adding document: ", e);
@@ -95,7 +98,8 @@ export default function PlaceOrder() {
     }
   return (
     <div className="  offset-md-3 col-12 col-md-6">
-      {reload?<Redirect to="orderconfirmation"/>:<span></span>}
+      {reload?<OrderConfirmation count={count}/>:
+      <>
         <div style={{}}> 
             <BillDetails/>
         </div>
@@ -267,7 +271,9 @@ export default function PlaceOrder() {
       </div>
       
     </Form> 
-  
+    </>
+  }
     </div>
+    
   )
 }
