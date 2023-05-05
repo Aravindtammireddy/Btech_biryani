@@ -16,7 +16,7 @@ function App() {
    
    <div style={{backgroundColor:"yellow","textAlign":"center",fontSize:"20px",fontWeight:"700"}}><div>Contact Us: <span>8688185437</span></div></div>
    <div style={{backgroundColor:"yellow","textAlign":"center",fontSize:"22px",fontWeight:"800"}}><div>Our Stall is live at admin block</div></div>
-   <div style={{backgroundColor:"yellow","textAlign":"center",fontSize:"20px",fontWeight:"700"}}><div>Last two days of this semester savour the flavour until next sem</div></div>
+   <div style={{backgroundColor:"yellow","textAlign":"center",fontSize:"20px",fontWeight:"700"}}><div>Last day of btech Biryani for this semester savour the flavour until next sem</div></div>
    {/* <div id="updates">Hello</div> */}
    <GlobalProvider >
       <NavBar/>
