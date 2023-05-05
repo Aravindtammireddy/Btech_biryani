@@ -1,3 +1,7 @@
+html {
+    font-family: sans-serif;
+}
+
 #updates{
     color:"red";
     font-size:"20px";
